@@ -1,0 +1,13 @@
+button {
+    float: right;
+    margin: 8px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #000;
+     font: inherit;
+     cursor: pointer;
+}
+  
+button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+
+.main {
+    background-image: linear-gradient(#0C86AE, #fff);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.input-form {
+    width: 100%;
+    padding: 15px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .input-form:nth-child(2) {
+      margin-bottom: 20px;
+  }
+
+  .form-container {
+    position: relative;
+    text-align: center;
+    top: 170px;
+    background-color: #FEFEFE;
+    padding: 30px 30px;
+    margin: 0 auto;
+    width: 35%;
+}
+
+.input-button {
+    padding: 14px;
+    background-color: #055873;
+    color: #fff;
+    margin: 0 auto;
+    width: 110px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    border: none;
+}
+
+.input-button:hover {
+    box-shadow: 2px 4px 2px #878787;
+}
+
+.title {
+    font-family: 'Alegreya Sans', sans-serif;
+}
