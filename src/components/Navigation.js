@@ -10,6 +10,7 @@ import SignOutButton from './SignOut';
 //Styles
 import './styles/navigation.css';
 
+
 const Navigation = ({ authUser }) => (
     <div>
         <AuthUserContext.Consumer>
@@ -22,29 +23,33 @@ const Navigation = ({ authUser }) => (
 );
 
 
-const NavigationAuth = () => (
-    <div>
-        <ul>
-            <li>
+const NavigationAuth = () => {
+    function showNav() {
+        let x = document.getElementById("navTo");
+        if (x.className === "main-navbar") {
+            x.id += " responsive";
+        } else {
+            x.className = "main-navbar";
+        }
+
+    }
+
+    return (
+
+        <div>
+            <ul id="navTo">
                 <SignOutButton />
-            </li>
-            <li id="navItem">
-                <Link to={ROUTES.HOME}> Home </Link>
-            </li>
-            <li id="navItem">
-                <Link to={ROUTES.ACCOUNT}> Account </Link>
-            </li>
-            <li id="navItem">
-                <Link to={ROUTES.ADMIN}> Admin Page </Link>
-            </li>
-            <li>
-                <a href="javascript:void(0);" onClick="showNav()" class="icon">
+                <Link to={ROUTES.HOME} id="navItem"> Home </Link>
+                <Link to={ROUTES.ACCOUNT} id="navItem"> Account </Link>
+                <Link to={ROUTES.ADMIN} id="navItem"> Admin Page </Link>
+                <a href="javascript:void(0);" onClick={showNav} class="icon" id="navItem">
                     <i class="fas fa-bars"></i>
                 </a>
-            </li>
-        </ul>
-    </div>
-);
+            </ul>
+        </div>
+
+    );
+};
 
 
 const NavigationNonAuth = () => (

@@ -10,18 +10,21 @@ ul {
     width: 100%;
 }
   
-li {
+/* li {
     float: right;
     margin: 8px;
-}
+} */
   
-li a {
+ul a {
     display: block;
     color: #000;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     transition: background-color 0.2s, color 0.2s;
+
+    float: right;
+    margin: 8px;
 }
   
 li a:hover {
@@ -51,18 +54,29 @@ li a:hover {
 
 /* Cellphone */
 @media (min-width: 320px) and (max-width: 480px) {
-    ul.responsive {
+    ul#responsive {
       position: relative;
     }
-    ul.responsive .icon {
+    ul#responsive .icon {
       position: absolute;
       right: 0;
       top: 0;
     }
-    ul.responsive a {
+    ul#responsive a {
       float: none;
       display: block;
       text-align: center;
+    }
+  }
+
+  /* Cellphone */
+  @media (min-width: 320px) and (max-width: 480px) {
+    ul a {
+      display: none;
+    }
+    ul a.icon {
+      float: right;
+      display: block;
     }
   }
   
