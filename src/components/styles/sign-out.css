@@ -11,3 +11,10 @@ button {
 button:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
+
+/* Cellphone */
+@media (min-width: 320px) and (max-width: 480px) {
+    button {
+        display: none;
+    }
+}

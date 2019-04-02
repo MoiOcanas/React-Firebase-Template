@@ -37,6 +37,11 @@ const NavigationAuth = () => (
             <li id="navItem">
                 <Link to={ROUTES.ADMIN}> Admin Page </Link>
             </li>
+            <li>
+                <a href="javascript:void(0);" onClick="showNav()" class="icon">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </li>
         </ul>
     </div>
 );
