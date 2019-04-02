@@ -15,3 +15,16 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
+
+/* Cellphone */
+@media (min-width: 320px) and (max-width: 480px) {
+    .main-grid-container {
+        grid-template-columns: auto;
+    }
+}
+/* Tablet */
+ @media (min-width: 481px) and (max-width: 1024px) {
+    .main-grid-container {
+        grid-template-columns: auto auto;
+    }
+}

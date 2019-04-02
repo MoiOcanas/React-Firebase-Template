@@ -3,12 +3,12 @@ import 'firebase/auth';
 import 'firebase/database';
 
 const config = {
-    apiKey: "put your apiKey here",
-    authDomain: "your domain",
-    databaseURL: "your url",
-    projectId: "",
-    storageBucket: "",
-    messagingSenderId: ""
+  apiKey: "AIzaSyD_3l_vHaaKrmXoho9-49WICfH-OoZ77po",
+  authDomain: "react-firebase-a93b8.firebaseapp.com",
+  databaseURL: "https://react-firebase-a93b8.firebaseio.com",
+  projectId: "react-firebase-a93b8",
+  storageBucket: "react-firebase-a93b8.appspot.com",
+  messagingSenderId: "535238636855"
 };
 
 class Firebase {
