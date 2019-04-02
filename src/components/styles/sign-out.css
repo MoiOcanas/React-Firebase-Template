@@ -1,4 +1,4 @@
-button {
+#sign-out-button {
     float: right;
     margin: 8px;
     border: none;
@@ -8,13 +8,13 @@ button {
      cursor: pointer;
 }
   
-button:hover {
+#sign-out-button:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Cellphone */
 @media (min-width: 320px) and (max-width: 480px) {
-    button {
+    #sign-out-button {
         display: none;
     }
 }
