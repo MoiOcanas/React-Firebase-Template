@@ -23,7 +23,7 @@ const INITIAL_STATE = {
 class PasswordForgetFormBase extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {...INITIAL_STATE};
+        this.state = { ...INITIAL_STATE };
     }
 
     onSubmit = event => {
@@ -38,7 +38,7 @@ class PasswordForgetFormBase extends React.Component {
                 this.setState({ error });
             });
 
-            event.preventDefault();
+        event.preventDefault();
     };
 
     onChange = event => {
@@ -50,7 +50,7 @@ class PasswordForgetFormBase extends React.Component {
 
         const isInvalid = email === '';
 
-        return(
+        return (
             <form onSubmit={this.onSubmit} className="form-password-forget">
                 <input
                     name="email"
@@ -61,12 +61,10 @@ class PasswordForgetFormBase extends React.Component {
                     placeholder="Email Address"
                 />
 
-                <div className="alignButton">
-                    <button disabled={isInvalid} type="submit" className="input-button">
-                        Reset
+                <button disabled={isInvalid} type="submit" className="input-button">
+                    Reset
                     </button>
-                </div>
-                { error && <p>{error.message}</p> }
+                {error && <p>{error.message}</p>}
             </form>
         );
     }

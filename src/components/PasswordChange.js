@@ -65,7 +65,7 @@ class PasswordChangeForm extends React.Component {
                     type="password"
                     placeholder="Confirm New Password"
                 />
-                <button disabled={isInvalid} type="submit" className="input-button">
+                <button disabled={isInvalid} type="submit" className="input-button" id="passwordChangeInput">
                     Reset
                 </button>
                 {error && <p>{error.message}</p>}
