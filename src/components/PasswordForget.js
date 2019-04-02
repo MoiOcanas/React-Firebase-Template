@@ -61,10 +61,11 @@ class PasswordForgetFormBase extends React.Component {
                     placeholder="Email Address"
                 />
 
-                <button disabled={isInvalid} type="submit" className="input-button">
-                    Reset
-                </button>
-
+                <div className="alignButton">
+                    <button disabled={isInvalid} type="submit" className="input-button">
+                        Reset
+                    </button>
+                </div>
                 { error && <p>{error.message}</p> }
             </form>
         );

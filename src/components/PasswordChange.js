@@ -15,7 +15,7 @@ const INITIAL_STATE = {
 class PasswordChangeForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {...INITIAL_STATE}
+        this.state = { ...INITIAL_STATE }
     }
 
     onSubmit = event => {
@@ -32,11 +32,11 @@ class PasswordChangeForm extends React.Component {
                 });
             });
 
-            event.preventDefault();
+        event.preventDefault();
     }
 
     onChange = event => {
-        this.setState({ 
+        this.setState({
             [event.target.name]: event.target.value
         });
     }
@@ -44,12 +44,12 @@ class PasswordChangeForm extends React.Component {
     render() {
         const { passwordOne, passwordTwo, error } = this.state;
 
-        const isInvalid = 
+        const isInvalid =
             passwordOne !== passwordTwo || passwordOne === '';
 
-        return(
+        return (
             <form onSubmit={this.onSubmit} className="form-password-change">
-                <input 
+                <input
                     name="passwordOne"
                     value={passwordOne}
                     className="input-form"
@@ -57,7 +57,7 @@ class PasswordChangeForm extends React.Component {
                     type="password"
                     placeholder="New Password"
                 />
-                 <input 
+                <input
                     name="passwordTwo"
                     value={passwordTwo}
                     className="input-form"
@@ -65,13 +65,14 @@ class PasswordChangeForm extends React.Component {
                     type="password"
                     placeholder="Confirm New Password"
                 />
-                <button disabled={isInvalid} type="submit" className="input-button">
-                    Reset
-                </button>
-
-                { error && <p>{error.message}</p> }
+                <div className="alignButton">
+                    <button disabled={isInvalid} type="submit" className="input-button">
+                        Reset
+                    </button>
+                </div>
+                {error && <p>{error.message}</p>}
             </form>
-        );    
+        );
     }
 }
 
