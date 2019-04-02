@@ -71,10 +71,10 @@ li a:hover {
 
   /* Cellphone */
   @media (min-width: 320px) and (max-width: 480px) {
-    ul a {
+    ul #navItem {
       display: none;
     }
-    ul a.icon {
+    ul #navItem.icon {
       float: right;
       display: block;
     }

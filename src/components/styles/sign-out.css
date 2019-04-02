@@ -6,6 +6,7 @@
     color: #000;
      font: inherit;
      cursor: pointer;
+     padding-top: 14px;
 }
   
 #sign-out-button:hover {
