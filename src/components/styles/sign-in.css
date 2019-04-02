@@ -47,3 +47,16 @@
 .title {
     font-family: 'Alegreya Sans', sans-serif;
 }
+
+/* Cellphone */
+@media (min-width: 320px) and (max-width: 480px) {
+    .form-container {
+        width: 80%;
+    }
+}
+/* Tablet */
+ @media (min-width: 481px) and (max-width: 1024px) {
+    .form-container {
+        width: 70%;
+    }
+}
