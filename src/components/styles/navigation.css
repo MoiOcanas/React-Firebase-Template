@@ -48,6 +48,24 @@ li a:hover {
         display: block;
     }
 }
+
+/* Cellphone */
+@media (min-width: 320px) and (max-width: 480px) {
+    ul.responsive {
+      position: relative;
+    }
+    ul.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    ul.responsive a {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+  }
+  
 /* Tablet */
  @media (min-width: 481px) and (max-width: 1024px) {
     #navItem {

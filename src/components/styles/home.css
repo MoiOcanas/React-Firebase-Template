@@ -16,10 +16,18 @@
     .main-container-home {
         margin-left: 0px;
     }
+
+    h1 {
+        width: 90%;
+    }
 }
 /* Tablet */
  @media (min-width: 481px) and (max-width: 1024px) {
     .main-container-home {
         margin-left: 0px;
+    }
+
+    h1 {
+        width: 90%;
     }
 }
