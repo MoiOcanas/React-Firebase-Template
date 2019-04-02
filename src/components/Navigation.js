@@ -28,6 +28,15 @@ const NavigationAuth = () => (
             <li>
                 <SignOutButton />
             </li>
+            <li id="navItem">
+                <Link to={ROUTES.HOME}> Home </Link>
+            </li>
+            <li id="navItem">
+                <Link to={ROUTES.ACCOUNT}> Account </Link>
+            </li>
+            <li id="navItem">
+                <Link to={ROUTES.ADMIN}> Admin Page </Link>
+            </li>
         </ul>
     </div>
 );
@@ -36,8 +45,8 @@ const NavigationAuth = () => (
 const NavigationNonAuth = () => (
     <div>
         <ul>
-            <i className="fab fa-react fa-2x" style={{ float: 'left', padding: '10px', marginLeft: '5px', marginTop: '5px'}}> </i>
-            <span style={{ float: 'left', padding: '10px', marginTop: '10px'}}>React-Firebase</span>
+            <i className="fab fa-react fa-2x" style={{ float: 'left', padding: '10px', marginLeft: '5px', marginTop: '5px' }}> </i>
+            <span style={{ float: 'left', padding: '10px', marginTop: '10px' }}>React-Firebase</span>
             <li>
                 <Link to={ROUTES.SIGN_IN}> Sign In </Link>
             </li>

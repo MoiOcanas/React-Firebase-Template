@@ -28,3 +28,29 @@ li a:hover {
     color: rgba(252, 252, 252, 1);;
     background-color: rgba(0, 0, 0, 0.6);
 }
+
+#navItem {
+    display: none;
+}
+
+/* Cellphone */
+@media (min-width: 320px) and (max-width: 480px) {
+    #navItem {
+        display: block;
+    }
+
+    ul a {
+        display: none;
+    }
+    
+    ul a.icon {
+        float: right;
+        display: block;
+    }
+}
+/* Tablet */
+ @media (min-width: 481px) and (max-width: 1024px) {
+    #navItem {
+        display: block;
+    }
+}
