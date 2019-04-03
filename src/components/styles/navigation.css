@@ -82,7 +82,15 @@ li a:hover {
   
 /* Tablet */
  @media (min-width: 481px) and (max-width: 1024px) {
-    #navItem {
-        display: block;
-    }
+  ul #navItem {
+    display: none;
+  }
+  ul #navItem.icon {
+    float: right;
+    display: block;
+  }
+
+  ul span {
+    display: none;
+  }
 }
