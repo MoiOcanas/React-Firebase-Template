@@ -26,10 +26,10 @@ const Navigation = ({ authUser }) => (
 const NavigationAuth = () => {
     function showNav() {
         let x = document.getElementById("navTo");
-        if (x.className != "main-navbar") {
+        if (x.className === "main-navbar") {
             x.className += " responsive";
         } else {
-            x.className = " ";
+            x.className = "main-navbar";
         }
     }
 
