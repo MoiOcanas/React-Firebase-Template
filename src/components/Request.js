@@ -8,6 +8,8 @@ import './styles/request.css';
 
 //Firebase
 import Firebase from './Firebase/firebase';
+import 'firebase/database';
+import app from 'firebase/app';
 
 class Request extends Component {
     constructor() {
@@ -18,22 +20,31 @@ class Request extends Component {
             email: "",
             message: "",
         };
-
+        this.db = app.database();
         this.onSubmit = this.onSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange(event) {
+    handleChange = event => {
         this.setState({ [event.target.name]: event.target.value });
     }
 
     onSubmit = event => {
         event.preventDefault();
-        Firebase.requests.push({
+        this.db.ref('requests').push({
             name: this.state.name,
             email: this.state.email,
             message: this.state.message
         })
+        .then(() => {
+            this.setState({
+                name: '',
+                email: '',
+                message: ''
+            });
+        })
+        .catch(err => console.log(err));
+        alert('Request done!');
 
     }
 
