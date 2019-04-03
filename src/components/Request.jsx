@@ -7,7 +7,6 @@ import Sidebar from './SideBar';
 import './styles/request.css';
 
 //Firebase
-import Firebase from './Firebase/firebase';
 import 'firebase/database';
 import app from 'firebase/app';
 
