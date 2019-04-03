@@ -6,6 +6,11 @@ import './styles/results.css';
 //Components
 import SideBar from './SideBar';
 
+//Firebase
+import 'firebase/database';
+import app from 'firebase/app';
+import firebase from 'firebase';
+
 class Results extends Component {
     constructor() {
         super();
@@ -13,7 +18,19 @@ class Results extends Component {
         this.state = {
             results: []
         };
+
+        this.db = app.database();
+        this.componentDidMount = this.componentDidMount.bind(this);
     }
+
+    componentDidMount = () => {
+        let requestRef = firebase.database().ref('requests');
+        requestRef.on('child_added', snapshot => {
+            this.setState({ results: snapshot.val() });
+            console.log(this.state.results)
+        });
+    }
+
     render() {
         return (
             <div>
