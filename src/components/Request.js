@@ -6,24 +6,34 @@ import Sidebar from './SideBar';
 //Styles
 import './styles/request.css';
 
+//Firebase
+import Firebase from './Firebase/firebase';
+
 class Request extends Component {
     constructor() {
         super();
 
         this.state = {
-            newRequest: {
-                name: "",
-                email: "",
-                message: "",
-            }
+            name: "",
+            email: "",
+            message: "",
         };
 
         this.onSubmit = this.onSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    onSubmit(e) {
-        e.preventDefault();
-        
+    handleChange(event) {
+        this.setState({ [event.target.name]: event.target.value });
+    }
+
+    onSubmit = event => {
+        event.preventDefault();
+        Firebase.requests.push({
+            name: this.state.name,
+            email: this.state.email,
+            message: this.state.message
+        })
 
     }
 
@@ -35,21 +45,26 @@ class Request extends Component {
                     <form onSubmit={this.onSubmit} className="form-container-request">
                         <h2 className="request-title">Make a request</h2>
                         <input
-                            name="username"
+                            name="name"
                             className="input-form-request"
-                            onChange={this.onChange}
+                            onChange={this.handleChange}
+                            value={this.state.name}
                             type="text"
                             placeholder="Full Name"
                         />
                         <input
                             name="email"
                             className="input-form-request"
+                            onChange={this.handleChange}
+                            value={this.state.email}
                             type="text"
                             placeholder="Email Address"
                         />
                         <input
                             name="message"
                             className="input-form-request"
+                            onChange={this.handleChange}
+                            value={this.state.message}
                             type="text"
                             placeholder="Message"
                         />
