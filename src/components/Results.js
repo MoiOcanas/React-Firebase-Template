@@ -24,45 +24,46 @@ class Results extends Component {
     }
 
     componentDidMount = () => {
-        let requestRef = firebase.database().ref('requests');
+        let arryRes = [];
+        let requestRef = firebase.database().ref('requests').orderByKey().limitToLast(100);
         requestRef.on('child_added', snapshot => {
-            this.setState({ results: snapshot.val() });
-            console.log(this.state.results)
+            arryRes.push({
+                name: snapshot.val().name,
+                email: snapshot.val().email,
+                message: snapshot.val().message
+            })
+            this.setState({
+                results: arryRes
+            })
         });
     }
 
     render() {
+        const { results } = this.state;
         return (
             <div>
                 <SideBar />
                 <div className="main-container-results">
                     <table className="form-container-results">
-                        <h1 className="results-title">Results</h1>
-                        <tr>
-                            <th>Firstname</th>
-                            <th>Lastname</th>
-                            <th>Savings</th>
-                        </tr>
-                        <tr>
-                            <td>Peter</td>
-                            <td>Griffin</td>
-                            <td>$100</td>
-                        </tr>
-                        <tr>
-                            <td>Lois</td>
-                            <td>Griffin</td>
-                            <td>$150</td>
-                        </tr>
-                        <tr>
-                            <td>Joe</td>
-                            <td>Swanson</td>
-                            <td>$300</td>
-                        </tr>
-                        <tr>
-                            <td>Cleveland</td>
-                            <td>Brown</td>
-                            <td>$250</td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                {
+                                    results.map((res, i) => {
+                                    return <tr key={i}>
+                                                <td>{res.name}</td>
+                                                <td>{res.email}</td>
+                                                <td>{res.message}</td>
+                                            </tr>
+                                    
+                                })
+                                }
+                        </tbody>
                     </table>
                 </div>
             </div>
