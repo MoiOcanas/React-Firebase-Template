@@ -25,13 +25,7 @@ const Navigation = ({ authUser }) => (
 
 const NavigationAuth = () => {
     function showNav() {
-        let x = document.getElementById("navTo");
-        if (x.className === "main-navbar") {
-            x.id += " responsive";
-        } else {
-            x.className = "main-navbar";
-        }
-
+        console.log('Hi')
     }
 
     return (
@@ -42,8 +36,8 @@ const NavigationAuth = () => {
                 <Link to={ROUTES.HOME} id="navItem"> Home </Link>
                 <Link to={ROUTES.ACCOUNT} id="navItem"> Account </Link>
                 <Link to={ROUTES.ADMIN} id="navItem"> Admin Page </Link>
-                <a href="javascript:void(0);" onClick={showNav} class="icon" id="navItem">
-                    <i class="fas fa-bars"></i>
+                <a href="javascript:void(0);" onClick={showNav} className="icon" id="navItem">
+                    <i className="fas fa-bars"></i>
                 </a>
             </ul>
         </div>
