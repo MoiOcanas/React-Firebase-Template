@@ -11,13 +11,15 @@ import 'firebase/database';
 import app from 'firebase/app';
 import firebase from 'firebase';
 
+const INITIAL_STATE = {
+    results: []
+}
+
 class Results extends Component {
     constructor() {
         super();
 
-        this.state = {
-            results: []
-        };
+        this.state = {...INITIAL_STATE};
 
         this.db = app.database();
         this.componentDidMount = this.componentDidMount.bind(this);

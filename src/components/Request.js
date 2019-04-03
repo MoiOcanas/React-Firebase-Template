@@ -10,15 +10,18 @@ import './styles/request.css';
 import 'firebase/database';
 import app from 'firebase/app';
 
+const INITIAL_STATE = {
+    name: "",
+    email: "",
+    message: "",
+}
+
 class Request extends Component {
     constructor() {
         super();
 
-        this.state = {
-            name: "",
-            email: "",
-            message: "",
-        };
+        this.state = {...INITIAL_STATE};
+        
         this.db = app.database();
         this.onSubmit = this.onSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -35,14 +38,14 @@ class Request extends Component {
             email: this.state.email,
             message: this.state.message
         })
-        .then(() => {
-            this.setState({
-                name: '',
-                email: '',
-                message: ''
-            });
-        })
-        .catch(err => console.log(err));
+            .then(() => {
+                this.setState({
+                    name: '',
+                    email: '',
+                    message: ''
+                });
+            })
+            .catch(err => console.log(err));
         alert('Request done!');
 
     }
