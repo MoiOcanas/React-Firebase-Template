@@ -10,11 +10,6 @@ ul {
     width: 100%;
 }
   
-/* li {
-    float: right;
-    margin: 8px;
-} */
-  
 ul a {
     display: block;
     color: #000;
@@ -35,22 +30,6 @@ li a:hover {
 #navItem {
     display: none;
 }
-
-/* Cellphone */
-/* @media (min-width: 320px) and (max-width: 480px) {
-    #navItem {
-        display: block;
-    }
-
-    ul a {
-        display: none;
-    }
-    
-    ul a.icon {
-        float: right;
-        display: block;
-    }
-} */
 
 /* Cellphone */
 @media (min-width: 320px) and (max-width: 480px) {

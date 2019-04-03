@@ -38,9 +38,9 @@ const NavigationAuth = () => {
         <div>
             <ul id="navTo">
                 <span><SignOutButton /></span>
-                <Link to={ROUTES.HOME} id="navItem"> Home </Link>
-                <Link to={ROUTES.ACCOUNT} id="navItem"> Account </Link>
-                <Link to={ROUTES.ADMIN} id="navItem"> Admin Page </Link>
+                <span onClick={showNav}><Link to={ROUTES.HOME} id="navItem"> Home </Link></span>
+                <span onClick={showNav}><Link to={ROUTES.ACCOUNT} id="navItem"> Account </Link></span>
+                <span onClick={showNav}><Link to={ROUTES.ADMIN} id="navItem"> Admin Page </Link></span>
                 <a href="javascript:void(0);" onClick={showNav} className="icon" id="navItem">
                     <i className="fas fa-bars"></i>
                 </a>
