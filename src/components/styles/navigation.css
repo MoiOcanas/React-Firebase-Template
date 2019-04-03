@@ -77,6 +77,12 @@ li a:hover {
     ul #navItem.icon {
       float: right;
       display: block;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    ul #navItem.icon:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
     }
   }
   
@@ -85,9 +91,16 @@ li a:hover {
   ul #navItem {
     display: none;
   }
+
   ul #navItem.icon {
     float: right;
     display: block;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  ul #navItem.icon:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
   }
 
   ul span {
