@@ -12,6 +12,7 @@ const SideBar = () => (
         <Link to={ROUTES.HOME}> Home </Link>
         <Link to={ROUTES.ACCOUNT}> Account </Link> 
         <Link to={ROUTES.ADMIN}> Admin Page </Link>
+        <Link to={ROUTES.REQUEST}> Make a request </Link>
     </div>
 );
 
