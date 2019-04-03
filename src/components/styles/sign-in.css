@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+@import url('https://fonts.googleapis.com/css?family=Gudea');
 
 .main {
     background-image: linear-gradient(#0C86AE, #fff);
@@ -38,6 +39,7 @@
     cursor: pointer;
     transition: box-shadow 0.2s;
     border: none;
+    font-family: 'Gudea', sans-serif;
 }
 
 .input-button:hover {

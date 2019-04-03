@@ -7,12 +7,33 @@ import Sidebar from './SideBar';
 import './styles/request.css';
 
 class Request extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            newRequest: {
+                name: "",
+                email: "",
+                message: "",
+            }
+        };
+
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
+    onSubmit(e) {
+        e.preventDefault();
+        
+
+    }
+
     render() {
         return (
             <div>
                 <Sidebar />
                 <div className="main-container-request">
                     <form onSubmit={this.onSubmit} className="form-container-request">
+                        <h2 className="request-title">Make a request</h2>
                         <input
                             name="username"
                             className="input-form-request"
@@ -27,12 +48,12 @@ class Request extends Component {
                             placeholder="Email Address"
                         />
                         <input
-                            name="passwordOne"
+                            name="message"
                             className="input-form-request"
-                            type="password"
-                            placeholder="Password"
+                            type="text"
+                            placeholder="Message"
                         />
-                        <button type="submit" className="input-button-request">Sign Up</button>
+                        <button type="submit" className="input-button-request">Submit</button>
                     </form>
                 </div>
             </div>
