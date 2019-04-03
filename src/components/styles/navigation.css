@@ -37,7 +37,7 @@ li a:hover {
 }
 
 /* Cellphone */
-@media (min-width: 320px) and (max-width: 480px) {
+/* @media (min-width: 320px) and (max-width: 480px) {
     #navItem {
         display: block;
     }
@@ -50,19 +50,19 @@ li a:hover {
         float: right;
         display: block;
     }
-}
+} */
 
 /* Cellphone */
 @media (min-width: 320px) and (max-width: 480px) {
-    ul#responsive {
+    ul.responsive {
       position: relative;
     }
-    ul#responsive .icon {
+    ul.responsive .icon {
       position: absolute;
       right: 0;
       top: 0;
     }
-    ul#responsive a {
+    ul.responsive #navItem {
       float: none;
       display: block;
       text-align: center;
