@@ -7,10 +7,12 @@
     font: inherit;
     cursor: pointer;
     padding: 9px;
+    transition: background-color 0.3s, color 0.3s;
 }
   
 #sign-out-button:hover {
     background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
 }
 
 /* Cellphone */
