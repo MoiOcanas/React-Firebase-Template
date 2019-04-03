@@ -15,6 +15,7 @@ import PasswordForgetPage from './PasswordForget';
 import HomePage from './Home';
 import AccountPage from './Acount';
 import AdminPage from './Admin';
+import Request from './Request';
 
 const App = () => (
     <Router>
@@ -27,6 +28,7 @@ const App = () => (
         <Route exact path={ROUTES.HOME} component={HomePage} />
         <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
         <Route exact path={ROUTES.ADMIN} component={AdminPage} />
+        <Route exact path={ROUTES.REQUEST} component={Request} />
     </Router>
 );
 
