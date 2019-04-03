@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Gudea');
+
+.main-container-results {
+    margin-left: 250px;
+    text-align: center;
+    position: relative;
+    top: 80px;
+}
+
+.results-title {
+    font-family: 'Gudea', sans-serif;
+    text-align: center;
+}
+
+.input-form-results {
+    width: 100%;
+    padding: 15px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+th, td {
+    padding: 18px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.form-container-results {
+    position: relative;
+    text-align: center;
+    top: 130px;
+    background-color: #FEFEFE;
+    padding: 30px 30px 80px 30px;
+    margin: 0 auto;
+    width: 75%;
+    box-shadow: 1px 1px 1px #878787;
+}
+
+.input-button-results {
+    padding: 14px;
+    background-color: #055873;
+    color: #fff;
+    margin: 10px auto;
+    width: 110px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    border: none;
+    font-family: 'Gudea', sans-serif;
+}
+
+.input-button-results:hover {
+    box-shadow: 2px 4px 2px #878787;
+}
+
+/* Cellphone */
+@media (min-width: 320px) and (max-width: 480px) {
+    .form-container-results {
+        width: 75%;
+    }
+
+    .main-container-results {
+        margin-left: 0px;
+    }
+}
+
+/* Tablet */
+ @media (min-width: 481px) and (max-width: 1024px) {
+    .form-container-results {
+        width: 80%;
+    }
+
+    .main-container-results {
+        margin-left: 0px;
+    }
+}

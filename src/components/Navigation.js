@@ -42,6 +42,7 @@ const NavigationAuth = () => {
                 <span onClick={showNav}><Link to={ROUTES.ACCOUNT} id="navItem"> Account </Link></span>
                 <span onClick={showNav}><Link to={ROUTES.ADMIN} id="navItem"> Admin Page </Link></span>
                 <span onClick={showNav}><Link to={ROUTES.REQUEST} id="navItem"> Make a request </Link></span>
+                <span onClick={showNav}><Link to={ROUTES.RESULTS} id="navItem"> Results </Link></span>
                 <a href="javascript:void(0);" onClick={showNav} className="icon" id="navItem">
                     <i className="fas fa-bars"></i>
                 </a>

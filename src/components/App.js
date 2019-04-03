@@ -16,6 +16,7 @@ import HomePage from './Home';
 import AccountPage from './Acount';
 import AdminPage from './Admin';
 import Request from './Request';
+import Results from './Results';
 
 const App = () => (
     <Router>
@@ -29,6 +30,7 @@ const App = () => (
         <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
         <Route exact path={ROUTES.ADMIN} component={AdminPage} />
         <Route exact path={ROUTES.REQUEST} component={Request} />
+        <Route exact path={ROUTES.RESULTS} component={Results} />
     </Router>
 );
 
