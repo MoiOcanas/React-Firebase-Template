@@ -5,7 +5,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
 //Context
-import { withFirebase } from '../components/Firebase';
+import { withFirebase } from './Firebase';
 import * as ROUTES from '../constants/routes';
 
 //Styles

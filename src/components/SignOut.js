@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Firebase
-import { withFirebase } from '../components/Firebase';
+import { withFirebase } from './Firebase';
 
 //Styles
 import './styles/sign-out.css';
